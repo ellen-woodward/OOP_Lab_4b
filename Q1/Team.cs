@@ -19,8 +19,8 @@ namespace Q1
         private int points;
         public int Points
         {
-            get { return (Wins * 3) + Draws; }
-            set { points = value; }
+            get { return (Wins * 3) + Draws;}
+            set { points = value;}
         }
 
         public List<Player> players { get; set; }
