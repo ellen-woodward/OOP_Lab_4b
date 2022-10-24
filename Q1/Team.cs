@@ -8,7 +8,7 @@ namespace Q1
 {
     public enum Result { Win, Draw, Loss }
 
-    internal class Team
+    internal class Team : IComparable<Team>
     {
         public string TeamName { get; private set; }
         public int Wins { get; private set; }
@@ -51,6 +51,11 @@ namespace Q1
                     Losses++;
                     break;
             }
+        }
+
+        public int CompareTo(Team that)
+        {
+            return this.Points.CompareTo(that.Points);
         }
     }
 }

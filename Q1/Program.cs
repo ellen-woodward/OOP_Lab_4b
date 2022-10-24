@@ -30,4 +30,7 @@ FinnHarps.AddResult(Result.Draw);
 GalwayUnited.AddResult(Result.Win);
 Dundalk.AddResult(Result.Loss);
 
+teams.Sort();
+teams.Reverse();
+
 DisplayTeams(teams);
