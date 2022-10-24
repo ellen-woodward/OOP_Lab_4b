@@ -34,3 +34,14 @@ teams.Sort();
 teams.Reverse();
 
 DisplayTeams(teams);
+
+SligoRovers.players.Add(new Player() { Name = "Ed McGinty", Position = "Goalkeeper" });
+SligoRovers.players.Add(new Player() { Name = "John Mahon", Position = "Defender" });
+SligoRovers.players.Add(new Player() { Name = "Ronan Coughlan", Position = "Forward" });
+
+Console.WriteLine("\nSligo Rovers Teamsheet");
+
+foreach (Player player in SligoRovers.players)
+{
+    Console.WriteLine(player);
+}

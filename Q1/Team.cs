@@ -23,11 +23,12 @@ namespace Q1
             set { points = value; }
         }
 
-        public Team() { }
+        public List<Player> players { get; set; }
 
         public Team(string name)
         {
             TeamName = name;
+            players = new List<Player>();
         }
 
         public string DisplayTeamTable()
