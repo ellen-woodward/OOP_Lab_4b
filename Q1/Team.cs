@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Q1
 {
+    public enum Result { Win, Draw, Loss }
+
     internal class Team
     {
         public string TeamName { get; private set; }
@@ -31,7 +33,24 @@ namespace Q1
         public string DisplayTeamTable()
         {
             return string.Format($"{TeamName}\t{Points}\t{Wins}\t{Draws}\t{Losses}\t{GamesPlayed}");
-           //return String.Format($"{TeamName,-15}{Points,-7}{Wins,-7}{Draws,-7}{Losses,-7}{GamesPlayed,-7}");
+        }
+
+        public void AddResult(Result result)
+        {
+            GamesPlayed++;
+
+            switch (result)
+            {
+                case Result.Win:
+                    Wins++;
+                    break;
+                case Result.Draw:
+                    Draws++;
+                    break;
+                case Result.Loss:
+                    Losses++;
+                    break;
+            }
         }
     }
 }

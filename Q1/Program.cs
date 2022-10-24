@@ -14,8 +14,6 @@ teams.Add(GalwayUnited);
 teams.Add(DerryCity);
 teams.Add(Dundalk);
 
-DisplayTeams(teams);
-
 void DisplayTeams(List<Team> teams)
 {
     Console.WriteLine($"Name\t\tPoints\tWins\tDraws\tLosses\tPlayed\t");
@@ -25,3 +23,11 @@ void DisplayTeams(List<Team> teams)
         Console.WriteLine(team.DisplayTeamTable());
     }
 }
+
+SligoRovers.AddResult(Result.Win);
+FinnHarps.AddResult(Result.Loss);
+FinnHarps.AddResult(Result.Draw);
+GalwayUnited.AddResult(Result.Win);
+Dundalk.AddResult(Result.Loss);
+
+DisplayTeams(teams);
